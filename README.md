@@ -1,25 +1,10 @@
 # Adult-Census-Income-Dataset
-This dataset contains information about individuals from the 1994 US Census, with the goal of predicting whether a person's income exceeds $50,000 per year. The dataset includes demographic and employment information, such as age, education level, occupation, and work hours per week.
-### Description of the Data:
-The dataset contains 48,842 instances, but 32,562 of the data was use in the course of this study, with a mix of continuous and categorical variables. The data is mostly complete, with some missing values in the native-country feature. The income variable is imbalanced, with approximately 76% of instances having an income of <=50K and 24% having an income of >50K.
+This dataset contains information about individuals from the 1994 US Census, with the goal of predicting whether a person's income exceeds $50,000 per year. The dataset includes demographic and employment information, such as age, education level, occupation, and work hours per week. The dataset contains 48,842 instances, but 32,562 of the data was use in the course of this study, with a mix of continuous and categorical variables. The data is mostly complete, with some missing values in the native-country feature. The income variable is imbalanced, with approximately 76% of instances having an income of <=50K and 24% having an income of >50K.
 ## Potential Use Questions:
 •	Predicting individual income levels based on demographic and employment information (such as sex, educational level, marital status, occupation, race, country and age).
 •	Does work hours determines individuals income?
 •	Analyzing the relationships between hours-per-week, capital-gain and capital-loss on income.
 # Income Classification and Demographic Analysis Project
-
-## 📌 Project Overview
-
-This project focuses on analyzing and predicting an individual’s income category (≤50K or >50K USD) using demographic and work-related data. It combines statistical analysis, machine learning, and visualizations to uncover patterns in income distribution by age, education, gender, country, and occupation.
-
----
-
-## 🎯 Objectives
-
-- Predict income classification using structured demographic and employment data.
-- Evaluate the importance of various features on income levels.
-- Use regression and statistical summaries to validate patterns.
-- Visualize income disparities across countries and sexes.
 
 ---
 
@@ -28,7 +13,7 @@ This project focuses on analyzing and predicting an individual’s income catego
 | Feature          | Type        | Description                                            |
 |------------------|-------------|--------------------------------------------------------|
 | Age              | Continuous  | Age of individual                                      |
-| Workclass        | Categorical | Type of employment                                     |
+| Workclass        | Categorical | Type of employment                                      |
 | Fnlwgt           | Continuous  | Final weight for survey adjustment                     |
 | Education        | Categorical | Highest level of education                             |
 | Education-Num    | Continuous  | Encoded form of education                              |
@@ -43,16 +28,6 @@ This project focuses on analyzing and predicting an individual’s income catego
 | Native Country   | Categorical | Country of origin                                      |
 | Income           | Binary      | Target variable: 0 (≤50K), 1 (>50K)                    |
 
----
-
-## 📈 Descriptive & Statistical Highlights
-
-- **Age vs Income**: Older individuals skew toward higher income brackets.
-- **Sex Disparity**: Males show a higher proportion in the >50K category.
-- **Country Differences**: Certain countries (e.g., U.S., India, Canada) have higher shares of >50K earners.
-- **Education Impact**: Higher education levels correlate strongly with higher income.
-
----
 
 ## 🌍 Income Distribution by Country (Pivot Table)
 
