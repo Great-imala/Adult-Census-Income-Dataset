@@ -25,6 +25,143 @@ This dataset contains information about individuals from the 1994 US Census, wit
 
 ---
 
+# 📊 Income Prediction Analysis
+
+This project explores how different features influence **predicted income levels** using a binary classification of income (`New Income2`):  
+- `0` = Income ≤ 50K  
+- `1` = Income > 50K
+
+The analysis includes interpretation of **pivot tables** by demographic and work-related categories such as **sex**, **education**, **marital status**, **occupation**, **workclass**, **race**, **age**, and **work hours**.
+
+---
+
+## 📁 Data Overview
+
+- `New Income2`: Target variable (0 = ≤50K, 1 = >50K)
+- Dataset contains categorical and numerical features used to predict income
+
+---
+
+## 🔍 Analysis by Feature
+
+
+### 1. 📌 Sex vs Income
+
+```plaintext
+| Sex    | ≤50K | >50K | Total |
+|--------|------|------|-------|
+| Female | 38.8%|15.04%|33.08% |
+| Male   |61.20%|84.96%|66.92% |
+✅ Insight: Males are more likely to be predicted to earn above 50K. Females are overrepresented in the lower-income group.
+
+2. 🎓 Education vs Income
+plaintext
+Copy
+Edit
+| Education     | ≤50K | >50K | Total |
+|---------------|------|------|-------|
+| Bachelors     |12.68%|28.33%|16.45% |
+| Masters       | 3.09%|12.23%| 5.29% |
+| HS-grad       |35.70%|21.36%|32.25% |
+| Some-college  |23.88%|17.69%|22.39% |
+| < High School |~16.0%| ~3.1%|~13.1% |
+✅ Insight: Higher education strongly correlates with higher predicted income. Bachelor's and above significantly boost chances of being in >50K group.
+
+3. 💍 Marital Status vs Income
+plaintext
+Copy
+Edit
+| Marital Status    | ≤50K | >50K | Total |
+|-------------------|------|------|-------|
+| Married-civ-spouse|33.51%|85.35%|45.99% |
+| Never-married     |41.23%| 6.26%|32.81% |
+| Divorced          |16.10%| 5.90%|13.65% |
+✅ Insight: Married individuals are strongly associated with higher income, while never-married and divorced are skewed toward lower income.
+
+4. 🛠️ Occupation vs Income
+plaintext
+Copy
+Edit
+| Occupation       | ≤50K | >50K | Total |
+|------------------|------|------|-------|
+| Exec-managerial  | 8.49%|25.10%|12.49% |
+| Prof-specialty   | 9.23%|23.71%|12.71% |
+| Adm-clerical     |13.20%| 6.47%|11.58% |
+| Other-service    |12.78%| 1.75%|10.12% |
+✅ Insight: Executive and professional roles correlate with high income. Service and clerical jobs lean toward lower income.
+
+5. 🏛️ Workclass vs Income
+plaintext
+Copy
+Edit
+| Workclass        | ≤50K | >50K | Total |
+|------------------|------|------|-------|
+| Private          |71.74%|63.30%|69.70% |
+| Self-emp-inc     | 2.00%| 7.93%| 3.43% |
+| Federal-gov      | 2.38%| 4.73%| 2.95% |
+✅ Insight: Self-employed (incorporated) and government workers are more likely to be high earners. Private sector dominates but includes both income levels.
+
+6. 🌍 Race vs Income
+plaintext
+Copy
+Edit
+| Race               | ≤50K | >50K | Total |
+|--------------------|------|------|-------|
+| White              |83.73%|90.77%|85.43% |
+| Black              |11.07%| 4.94%| 9.59% |
+| Amer-Indian-Eskimo | 1.11%| 0.46%| 0.96% |
+✅ Insight: White individuals are overrepresented in the high-income group; other races, especially Black and Indigenous, are more often in the lower-income group.
+
+7. 📅 Age vs Income
+plaintext
+Copy
+Edit
+| Age Range | ≤50K | >50K | Total |
+|-----------|------|------|-------|
+| 17–21     |12.64%| 0.06%| 9.61% |
+| 37–41     |10.94%|17.84%|12.60% |
+| 42–46     | 9.47%|17.91%|11.50% |
+✅ Insight: High-income predictions increase with age, peaking in mid-to-late 40s. Very young adults (<30) are mostly predicted to earn ≤50K.
+
+8. ⏱️ Work Hours vs Income
+plaintext
+Copy
+Edit
+| Work Hours | ≤50K | >50K | Total |
+|------------|------|------|-------|
+| 1–30       |19.78%| 4.51%|16.11% |
+| 31–40      |57.05%|46.32%|54.47% |
+| 41–60      |20.31%|44.03%|25.96% |
+✅ Insight: Individuals working longer hours (41–60+) are much more likely to be predicted to earn above 50K. Part-time hours correlate with lower income.
+
+📌 Conclusion
+Education, occupation, work hours, and marital status are the most significant predictors of income.
+
+Race, age, and workclass reveal underlying disparities and societal patterns.
+
+The model reflects real-world economic trends — but also may carry bias based on historical data.
+
+📈 Optional: Visualizations
+Consider adding:
+
+Heatmaps of income distribution by age and education
+
+Stacked bar charts for sex, race, and marital status
+
+Line plots for work hours and age vs income probability
+
+🚀 Next Steps
+Conduct multivariate regression or classification
+
+Apply model fairness checks (e.g., disparate impact analysis)
+
+Improve model with better feature engineering or bias mitigation
+
+vbnet
+Copy
+Edit
+
+
 ## Regression Model Summary
 
 | Statistic          | Value          |
