@@ -240,15 +240,6 @@ The regression model explains ~11% of the variance in income, suggesting other i
 ✅ Males are much more likely to be predicted to earn >50K; females overrepresented in ≤50K.
 
 
-| Education     | ≤50K | >50K |
-|---------------|------|------|
-| HS-grad       |35.7% |21.36%|
-| Some-college  |23.9% |17.69%|
-| Bachelors     |12.7% |28.33%|
-| Masters       | 3.1% |12.23%|
-| Doctorate     | 0.43%| 3.90%|
-✅ Higher education (Bachelor’s+) strongly predicts higher income; lower education skews towards ≤50K.
-
 # 📊 Income Prediction Analysis
 
 This project explores how different features influence **predicted income levels** using a binary classification of income (`New Income2`):  
