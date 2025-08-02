@@ -1,4 +1,8 @@
 # Adult-Census-Income-Dataset
+
+<img width="765" height="401" alt="Image" src="https://github.com/user-attachments/assets/91147182-e29f-47a4-9a99-1183ac715d7d" />
+
+## Introduction
 This dataset contains information about individuals from the 1994 US Census, with the goal of predicting whether a person's income exceeds $50,000 per year. The dataset includes demographic and employment information, such as age, education level, occupation, and work hours per week. The dataset contains 48,842 instances, but 32,562 of the data was use in the course of this study, with a mix of continuous and categorical variables. The data is mostly complete, with some missing values in the native-country feature. The income variable is imbalanced, with approximately 76% of instances having an income of <=50K and 24% having an income of >50K.
 ## Potential Use Questions:
 •	Predicting individual income levels based on demographic and employment information (such as sex, educational level, marital status, occupation, race, country and age).
