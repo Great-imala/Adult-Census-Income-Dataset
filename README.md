@@ -8,9 +8,7 @@ This dataset contains information about individuals from the 1994 US Census, wit
 •	Predicting individual income levels based on demographic and employment information (such as sex, educational level, marital status, occupation, race, country and age).
 •	Does work hours determines individuals income?
 •	Analyzing the relationships between hours-per-week, capital-gain and capital-loss on income.
-# Income Classification and Demographic Analysis Project
 
----
 
 ## Dataset Features
 
@@ -35,26 +33,21 @@ The analysis includes interpretation of **pivot tables** by demographic and work
 
 ---
 
-## 📁 Data Overview
-
-- `New Income2`: Target variable (0 = ≤50K, 1 = >50K)
-- Dataset contains categorical and numerical features used to predict income
-
----
 
 ## 🔍 Analysis by Feature
 
 
-### 1. 📌 Sex vs Income
+## 1. 📌 Sex vs Income
 
 ```plaintext
 | Sex    | ≤50K | >50K | Total |
 |--------|------|------|-------|
 | Female | 38.8%|15.04%|33.08% |
 | Male   |61.20%|84.96%|66.92% |
+
 ✅ Insight: Males are more likely to be predicted to earn above 50K. Females are overrepresented in the lower-income group.
 
-2. 🎓 Education vs Income
+## 🎓 Education vs Income
 plaintext
 Copy
 Edit
@@ -65,9 +58,10 @@ Edit
 | HS-grad       |35.70%|21.36%|32.25% |
 | Some-college  |23.88%|17.69%|22.39% |
 | < High School |~16.0%| ~3.1%|~13.1% |
+
 ✅ Insight: Higher education strongly correlates with higher predicted income. Bachelor's and above significantly boost chances of being in >50K group.
 
-3. 💍 Marital Status vs Income
+## 💍 Marital Status vs Income
 plaintext
 Copy
 Edit
@@ -76,9 +70,10 @@ Edit
 | Married-civ-spouse|33.51%|85.35%|45.99% |
 | Never-married     |41.23%| 6.26%|32.81% |
 | Divorced          |16.10%| 5.90%|13.65% |
+
 ✅ Insight: Married individuals are strongly associated with higher income, while never-married and divorced are skewed toward lower income.
 
-4. 🛠️ Occupation vs Income
+## 🛠️ Occupation vs Income
 plaintext
 Copy
 Edit
@@ -88,9 +83,10 @@ Edit
 | Prof-specialty   | 9.23%|23.71%|12.71% |
 | Adm-clerical     |13.20%| 6.47%|11.58% |
 | Other-service    |12.78%| 1.75%|10.12% |
+
 ✅ Insight: Executive and professional roles correlate with high income. Service and clerical jobs lean toward lower income.
 
-5. 🏛️ Workclass vs Income
+## 🏛️ Workclass vs Income
 plaintext
 Copy
 Edit
@@ -99,9 +95,10 @@ Edit
 | Private          |71.74%|63.30%|69.70% |
 | Self-emp-inc     | 2.00%| 7.93%| 3.43% |
 | Federal-gov      | 2.38%| 4.73%| 2.95% |
+
 ✅ Insight: Self-employed (incorporated) and government workers are more likely to be high earners. Private sector dominates but includes both income levels.
 
-6. 🌍 Race vs Income
+## 🌍 Race vs Income
 plaintext
 Copy
 Edit
@@ -110,9 +107,10 @@ Edit
 | White              |83.73%|90.77%|85.43% |
 | Black              |11.07%| 4.94%| 9.59% |
 | Amer-Indian-Eskimo | 1.11%| 0.46%| 0.96% |
+
 ✅ Insight: White individuals are overrepresented in the high-income group; other races, especially Black and Indigenous, are more often in the lower-income group.
 
-7. 📅 Age vs Income
+## 📅 Age vs Income
 plaintext
 Copy
 Edit
@@ -121,9 +119,10 @@ Edit
 | 17–21     |12.64%| 0.06%| 9.61% |
 | 37–41     |10.94%|17.84%|12.60% |
 | 42–46     | 9.47%|17.91%|11.50% |
+
 ✅ Insight: High-income predictions increase with age, peaking in mid-to-late 40s. Very young adults (<30) are mostly predicted to earn ≤50K.
 
-8. ⏱️ Work Hours vs Income
+## ⏱️ Work Hours vs Income
 plaintext
 Copy
 Edit
@@ -132,99 +131,8 @@ Edit
 | 1–30       |19.78%| 4.51%|16.11% |
 | 31–40      |57.05%|46.32%|54.47% |
 | 41–60      |20.31%|44.03%|25.96% |
+
 ✅ Insight: Individuals working longer hours (41–60+) are much more likely to be predicted to earn above 50K. Part-time hours correlate with lower income.
-
-📌 Conclusion
-Education, occupation, work hours, and marital status are the most significant predictors of income.
-
-Race, age, and workclass reveal underlying disparities and societal patterns.
-
-The model reflects real-world economic trends — but also may carry bias based on historical data.
-
-📈 Optional: Visualizations
-Consider adding:
-
-Heatmaps of income distribution by age and education
-
-Stacked bar charts for sex, race, and marital status
-
-Line plots for work hours and age vs income probability
-
-🚀 Next Steps
-Conduct multivariate regression or classification
-
-Apply model fairness checks (e.g., disparate impact analysis)
-
-Improve model with better feature engineering or bias mitigation
-
-vbnet
-Copy
-Edit
-
-
-## Regression Model Summary
-
-| Statistic          | Value          |
-|--------------------|----------------|
-| Multiple R         | 0.3412         |
-| R Square           | 0.1164 (11.6%) |
-| Adjusted R Square  | 0.1163         |
-| Standard Error     | 0.4019         |
-| Observations       | 32,561         |
-
-### ANOVA Table
-
-| Source      | df    | SS         | MS         | F          | Significance F |
-|-------------|-------|------------|------------|------------|---------------|
-| Regression  | 3     | 693.0663   | 231.0221   | 1429.9905  | 0             |
-| Residual    | 32557 | 5252.2596  | 0.1614     |            |               |
-| Total       | 32560 | 5945.3259  |            |            |               |
-
-### Interpretation
-
-- The model explains about **11.6%** of variance in income levels.
-- The F-statistic is highly significant (p < 0.0001), indicating the regression model fits better than a model with no predictors.
-- However, R Square suggests that other variables might also influence income.
-
----
-
-## Data Visualization
-
-- **Pivot Charts**: Used to analyze income by sex, education, and workclass.  
-- **Map Charts**: Considered to visualize geographic distribution of income levels across countries.
-- Bar charts and distribution plots illustrate income patterns by demographic categories.
-
----
-
-## Analysis Notes
-
-- Income distribution shows variation by sex, education, and country.
-- The binary income indicator `Income2` allows for classification-based analysis.
-- Feature encoding and data preprocessing steps are essential for accurate modeling.
-- Categorical variables are encoded appropriately (e.g., one-hot or label encoding) before regression.
-
----
-
-## Usage Instructions
-
-1. **Load Data**: Import dataset with all features listed.
-2. **Preprocess**: Handle missing values, encode categorical variables.
-3. **Modeling**: Run linear regression with key predictors (Age, Sex, Education, Workclass).
-4. **Evaluate**: Review regression statistics, ANOVA table, and R Square.
-5. **Visualize**: Generate pivot charts and map charts for exploratory analysis.
-6. **Interpret**: Draw conclusions on how demographic features relate to income.
-
----
-
-## Future Work
-
-- Explore additional predictors for improving R Square.
-- Perform classification modeling for income category prediction.
-- Incorporate interaction terms to capture feature relationships.
-- Extend geographic visualization with more granular data.
-
----
-
 
 ## 🌍 Income Distribution by Country (Pivot Table)
 
@@ -360,3 +268,93 @@ A multiple linear regression was conducted to examine the relationship between p
 
 📌 *Note*: This statistical summary provides a foundation for model validation, but the model can be improved using more features and nonlinear or ensemble models.
 
+
+## Regression Model Summary
+
+| Statistic          | Value          |
+|--------------------|----------------|
+| Multiple R         | 0.3412         |
+| R Square           | 0.1164 (11.6%) |
+| Adjusted R Square  | 0.1163         |
+| Standard Error     | 0.4019         |
+| Observations       | 32,561         |
+
+### ANOVA Table
+
+| Source      | df    | SS         | MS         | F          | Significance F |
+|-------------|-------|------------|------------|------------|---------------|
+| Regression  | 3     | 693.0663   | 231.0221   | 1429.9905  | 0             |
+| Residual    | 32557 | 5252.2596  | 0.1614     |            |               |
+| Total       | 32560 | 5945.3259  |            |            |               |
+
+### Interpretation
+
+- The model explains about **11.6%** of variance in income levels.
+- The F-statistic is highly significant (p < 0.0001), indicating the regression model fits better than a model with no predictors.
+- However, R Square suggests that other variables might also influence income.
+
+---
+
+## Data Visualization
+
+- **Pivot Charts**: Used to analyze income by sex, education, and workclass.  
+- **Map Charts**: Considered to visualize geographic distribution of income levels across countries.
+- Bar charts and distribution plots illustrate income patterns by demographic categories.
+
+---
+
+## Analysis Notes
+
+- Income distribution shows variation by sex, education, and country.
+- The binary income indicator `Income2` allows for classification-based analysis.
+- Feature encoding and data preprocessing steps are essential for accurate modeling.
+- Categorical variables are encoded appropriately (e.g., one-hot or label encoding) before regression.
+
+---
+
+## Usage Instructions
+
+1. **Load Data**: Import dataset with all features listed.
+2. **Preprocess**: Handle missing values, encode categorical variables.
+3. **Modeling**: Run linear regression with key predictors (Age, Sex, Education, Workclass).
+4. **Evaluate**: Review regression statistics, ANOVA table, and R Square.
+5. **Visualize**: Generate pivot charts and map charts for exploratory analysis.
+6. **Interpret**: Draw conclusions on how demographic features relate to income.
+
+---
+
+## Future Work
+
+- Explore additional predictors for improving R Square.
+- Perform classification modeling for income category prediction.
+- Incorporate interaction terms to capture feature relationships.
+- Extend geographic visualization with more granular data.
+
+---
+
+📌 Conclusion
+Education, occupation, work hours, and marital status are the most significant predictors of income.
+
+Race, age, and workclass reveal underlying disparities and societal patterns.
+
+The model reflects real-world economic trends — but also may carry bias based on historical data.
+
+📈 Optional: Visualizations
+Consider adding:
+
+Heatmaps of income distribution by age and education
+
+Stacked bar charts for sex, race, and marital status
+
+Line plots for work hours and age vs income probability
+
+🚀 Next Steps
+Conduct multivariate regression or classification
+
+Apply model fairness checks (e.g., disparate impact analysis)
+
+Improve model with better feature engineering or bias mitigation
+
+vbnet
+Copy
+Edit
