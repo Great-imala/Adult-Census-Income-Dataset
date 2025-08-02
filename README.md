@@ -37,9 +37,10 @@ The analysis includes interpretation of **pivot tables** by demographic and work
 ## 🔍 Analysis by Feature
 
 
-## 1. 📌 Sex vs Income
+##  📌 Sex vs Income
 
-```plaintext
+```
+plaintext
 | Sex    | ≤50K | >50K | Total |
 |--------|------|------|-------|
 | Female | 38.8%|15.04%|33.08% |
@@ -47,7 +48,9 @@ The analysis includes interpretation of **pivot tables** by demographic and work
 
 ✅ Insight: Males are more likely to be predicted to earn above 50K. Females are overrepresented in the lower-income group.
 
-## 🎓 Education vs Income
+---
+
+# 🎓 Education vs Income
 plaintext
 Copy
 Edit
@@ -61,7 +64,9 @@ Edit
 
 ✅ Insight: Higher education strongly correlates with higher predicted income. Bachelor's and above significantly boost chances of being in >50K group.
 
-## 💍 Marital Status vs Income
+---
+
+# 💍 Marital Status vs Income
 plaintext
 Copy
 Edit
@@ -73,7 +78,9 @@ Edit
 
 ✅ Insight: Married individuals are strongly associated with higher income, while never-married and divorced are skewed toward lower income.
 
-## 🛠️ Occupation vs Income
+---
+
+# 🛠️ Occupation vs Income
 plaintext
 Copy
 Edit
@@ -86,7 +93,9 @@ Edit
 
 ✅ Insight: Executive and professional roles correlate with high income. Service and clerical jobs lean toward lower income.
 
-## 🏛️ Workclass vs Income
+---
+
+# 🏛️ Workclass vs Income
 plaintext
 Copy
 Edit
@@ -98,7 +107,9 @@ Edit
 
 ✅ Insight: Self-employed (incorporated) and government workers are more likely to be high earners. Private sector dominates but includes both income levels.
 
-## 🌍 Race vs Income
+---
+
+# 🌍 Race vs Income
 plaintext
 Copy
 Edit
@@ -110,7 +121,9 @@ Edit
 
 ✅ Insight: White individuals are overrepresented in the high-income group; other races, especially Black and Indigenous, are more often in the lower-income group.
 
-## 📅 Age vs Income
+---
+
+# 📅 Age vs Income
 plaintext
 Copy
 Edit
@@ -122,7 +135,9 @@ Edit
 
 ✅ Insight: High-income predictions increase with age, peaking in mid-to-late 40s. Very young adults (<30) are mostly predicted to earn ≤50K.
 
-## ⏱️ Work Hours vs Income
+---
+
+# ⏱️ Work Hours vs Income
 plaintext
 Copy
 Edit
@@ -134,7 +149,9 @@ Edit
 
 ✅ Insight: Individuals working longer hours (41–60+) are much more likely to be predicted to earn above 50K. Part-time hours correlate with lower income.
 
-## 🌍 Income Distribution by Country (Pivot Table)
+---
+
+# 🌍 Income Distribution by Country (Pivot Table)
 
 | Country               | ≤50K (%) | >50K (%) | Total (%) |
 |------------------------|----------|----------|-----------|
