@@ -12,25 +12,81 @@ This dataset contains information about individuals from the 1994 US Census, wit
 
 ---
 
-## 📊 Dataset Features
+## Dataset Features
 
-| Feature          | Type        | Description                                            |
-|------------------|-------------|--------------------------------------------------------|
-| Age              | Continuous  | Age of individual                                      |
-| Workclass        | Categorical | Type of employment                                      |
-| Fnlwgt           | Continuous  | Final weight for survey adjustment                     |
-| Education        | Categorical | Highest level of education                             |
-| Education-Num    | Continuous  | Encoded form of education                              |
-| Marital Status   | Categorical | Marital relationship status                            |
-| Occupation       | Categorical | Job type or field                                      |
-| Relationship     | Categorical | Relationship within household                          |
-| Race             | Categorical | Race group                                              |
-| Sex              | Categorical | Gender of respondent                                   |
-| Capital Gain     | Continuous  | Investment gains                                       |
-| Capital Loss     | Continuous  | Investment losses                                      |
-| Hours per Week   | Continuous  | Number of hours worked per week                        |
-| Native Country   | Categorical | Country of origin                                      |
-| Income           | Binary      | Target variable: 0 (≤50K), 1 (>50K)                    |
+- **Age**: Continuous variable representing the individual's age.
+- **Workclass**: Categorical variable representing the individual's work class (e.g., Private, Self-emp-not-inc, Government).
+- **Fnlwgt**: Continuous variable representing the individual's final weight.
+- **Education**: Categorical variable representing the highest education level attained (e.g., HS-grad, Some-college).
+- **Sex**: Categorical variable indicating gender (Male, Female).
+- **Country**: Categorical variable representing the country of residence.
+- **Income2**: Binary indicator for income level (0 = below threshold, 1 = above threshold).
+- Additional features as per dataset.
+
+---
+
+## Regression Model Summary
+
+| Statistic          | Value          |
+|--------------------|----------------|
+| Multiple R         | 0.3412         |
+| R Square           | 0.1164 (11.6%) |
+| Adjusted R Square  | 0.1163         |
+| Standard Error     | 0.4019         |
+| Observations       | 32,561         |
+
+### ANOVA Table
+
+| Source      | df    | SS         | MS         | F          | Significance F |
+|-------------|-------|------------|------------|------------|---------------|
+| Regression  | 3     | 693.0663   | 231.0221   | 1429.9905  | 0             |
+| Residual    | 32557 | 5252.2596  | 0.1614     |            |               |
+| Total       | 32560 | 5945.3259  |            |            |               |
+
+### Interpretation
+
+- The model explains about **11.6%** of variance in income levels.
+- The F-statistic is highly significant (p < 0.0001), indicating the regression model fits better than a model with no predictors.
+- However, R Square suggests that other variables might also influence income.
+
+---
+
+## Data Visualization
+
+- **Pivot Charts**: Used to analyze income by sex, education, and workclass.  
+- **Map Charts**: Considered to visualize geographic distribution of income levels across countries.
+- Bar charts and distribution plots illustrate income patterns by demographic categories.
+
+---
+
+## Analysis Notes
+
+- Income distribution shows variation by sex, education, and country.
+- The binary income indicator `Income2` allows for classification-based analysis.
+- Feature encoding and data preprocessing steps are essential for accurate modeling.
+- Categorical variables are encoded appropriately (e.g., one-hot or label encoding) before regression.
+
+---
+
+## Usage Instructions
+
+1. **Load Data**: Import dataset with all features listed.
+2. **Preprocess**: Handle missing values, encode categorical variables.
+3. **Modeling**: Run linear regression with key predictors (Age, Sex, Education, Workclass).
+4. **Evaluate**: Review regression statistics, ANOVA table, and R Square.
+5. **Visualize**: Generate pivot charts and map charts for exploratory analysis.
+6. **Interpret**: Draw conclusions on how demographic features relate to income.
+
+---
+
+## Future Work
+
+- Explore additional predictors for improving R Square.
+- Perform classification modeling for income category prediction.
+- Incorporate interaction terms to capture feature relationships.
+- Extend geographic visualization with more granular data.
+
+---
 
 
 ## 🌍 Income Distribution by Country (Pivot Table)
