@@ -1,4 +1,4 @@
-# Adult-Census-Income-Dataset
+# Adult-Census-Income-Data
 
 <img width="765" height="401" alt="Image" src="https://github.com/user-attachments/assets/91147182-e29f-47a4-9a99-1183ac715d7d" />
 
